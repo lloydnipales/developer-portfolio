@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio website! This is where I showcase my skills, experience, and projects in **Web Development**, **Graphic Designing**, **Discord Development**, and **System Development**.
 
-🔗 **Live Site:** [View Here](https://personal-portfolio-iota-ochre-45.vercel.app)
+🔗 **Live Site:** [View Here](https://developer-portfolio-nu-three.vercel.app/)
 
 ---
 
