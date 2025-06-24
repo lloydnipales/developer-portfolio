@@ -174,5 +174,5 @@ document.addEventListener("visibilitychange", function () {
 
 function handleSubmit(event) {
   event.preventDefault(); // prevent actual submission
-  window.location.href = "thankyou.html"; // redirect
+  window.location.href = "pages/main-pages/thankyou/index.html"; // redirect
 }
