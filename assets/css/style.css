@@ -4,7 +4,7 @@
 
 
 /**
- * copyright 2022 @codewithsadee
+ * copyright 202 @developerlloyd
  */
 
 
@@ -872,7 +872,7 @@ main {
 
 
 /*-----------------------------------*\
-  #PORTFOLIO
+  #PROJECTS
 \*-----------------------------------*/
 
 .filter-list { display: none; }
@@ -1220,6 +1220,77 @@ textarea.form-input::-webkit-resizer { display: none; }
 .form-btn:disabled:hover { background: var(--border-gradient-onyx); }
 
 .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
+/* Wrapper for custom dropdown icon */
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.select-wrapper select {
+  appearance: none;
+  width: 100%;
+  background-color: transparent;
+  color: var(--white-2);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-400);
+  padding: 13px 20px;
+  padding-right: 45px;
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+}
+
+.select-wrapper select:focus {
+  border-color: var(--orange-yellow-crayola);
+  outline: none;
+}
+
+.select-wrapper i {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--orange-yellow-crayola);
+  pointer-events: none;
+  font-size: 14px;
+}
+
+/* Improve readability of option text */
+select option {
+  background-color: var(--card-color, #2a2a2a);
+  color: #ffffff;
+}
+/* Enhance select dropdown options style (for most modern browsers) */
+select.form-input option {
+  background-color: #2a2a2a; /* dark background */
+  color: #f1f1f1;
+  padding: 10px;
+  font-size: var(--fs-6);
+  font-family: 'Poppins', sans-serif;
+  font-weight: var(--fw-400);
+}
+
+/* Firefox-specific fix for option spacing */
+select.form-input {
+  text-overflow: ellipsis;
+}
+
+/* Chrome/Edge only: dropdown arrow + menu look (limited styling support) */
+select.form-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--orange-yellow-crayola);
+  background-color: #1f1f1f;
+  color: var(--white-1);
+}
+
+/* Custom dropdown hover effect (for browsers that support it) */
+select.form-input option:hover {
+  background-color: var(--orange-yellow-crayola);
+  color: #1a1a1a;
+  font-weight: bold;
+}
 
 
 
@@ -1244,7 +1315,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   /**
-   * #PORTFOLIO, BLOG 
+   * #PROJECTS 
    */
 
   .project-img,
@@ -1503,7 +1574,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   /**
-   * #PORTFOLIO, BLOG
+   * #PROJECTS, BLOG
    */
 
   .project-img, .blog-banner-box { border-radius: 16px; }
@@ -1596,7 +1667,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   /**
-   * PORTFOLIO
+   * PROJECTS
    */
 
   .article-title { padding-bottom: 20px; }
@@ -1622,7 +1693,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .filter-item button.active { color: var(--orange-yellow-crayola); }
 
-  /* portfolio and blog grid */
+  /* PROJECTS and blog grid */
 
   .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; }
 
@@ -1741,7 +1812,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   /**
-   * PORTFOLIO
+   * PROJECTS
    */
 
   .project-list { grid-template-columns: repeat(3, 1fr); }
@@ -1879,4 +1950,91 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+
+/**
+  * LOADER ANIMATIONS
+  */
+/* Fullscreen Loader */
+#loader {
+  position: fixed;
+  inset: 0;
+  background-color: #202020;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 9999;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+  perspective: 1000px;
+}
+
+/* Logo Animation */
+.loader-logo-tech {
+  width: 140px;
+  height: 140px;
+  z-index: 2;
+  animation: float3D 3.5s ease-in-out infinite;
+  filter: drop-shadow(0 0 25px #facc15);
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+/* Tap/Click effect */
+.loader-logo-tech:active {
+  transform: scale(0.95) rotateY(0) rotateX(0);
+  filter: drop-shadow(0 0 15px #facc15);
+}
+
+/* Glowing Grid Behind the Logo */
+.loader-bg-grid {
+  position: absolute;
+  width: 200vmax;
+  height: 200vmax;
+  background-image: linear-gradient(#1a1a1a 1px, transparent 1px), 
+                    linear-gradient(90deg, #1a1a1a 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.03;
+  animation: rotateGrid 20s linear infinite;
+  z-index: 1;
+}
+
+/* Animate grid rotation */
+@keyframes rotateGrid {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Elegant Float and Rotate Logo Animation */
+@keyframes float3D {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg) scale(1);
+  }
+  25% {
+    transform: rotateY(8deg) rotateX(8deg) translateY(-5px) scale(1.05);
+  }
+  50% {
+    transform: rotateY(0deg) rotateX(0deg) translateY(0px) scale(1);
+  }
+  75% {
+    transform: rotateY(-8deg) rotateX(-8deg) translateY(-5px) scale(1.05);
+  }
+  100% {
+    transform: rotateY(0deg) rotateX(0deg) scale(1);
+  }
+}
+
+/* Hide loader after ready */
+body.loaded #loader {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Responsive Logo Size */
+@media (max-width: 600px) {
+  .loader-logo-tech {
+    width: 180px;
+    height: 180px;
+    animation-duration: 3s;
+  }
 }
