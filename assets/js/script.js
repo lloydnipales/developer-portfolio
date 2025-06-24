@@ -113,14 +113,10 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 }
 
-
-
-// contact form variables
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
-// add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
   formInputs[i].addEventListener("input", function () {
 
@@ -134,9 +130,6 @@ for (let i = 0; i < formInputs.length; i++) {
   });
 }
 
-
-
-// page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
@@ -156,4 +149,30 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
 
   });
+}
+
+for (let i = 0; i < navigationLinks.length; i++) {
+  navigationLinks[i].addEventListener("click", function () {
+    const pageName = pages[i].dataset.page;
+    document.title = `Developer Lloyd | ${capitalize(pageName)}`;
+  });
+}
+
+function capitalize(word) {
+  return word.charAt(0).toUpperCase() + word.slice(1);
+}
+
+const originalTitle = document.title;
+
+document.addEventListener("visibilitychange", function () {
+  if (document.hidden) {
+    document.title = "Hey!, please come back!!";
+  } else {
+    document.title = originalTitle;
+  }
+});
+
+function handleSubmit(event) {
+  event.preventDefault(); // prevent actual submission
+  window.location.href = "thankyou.html"; // redirect
 }
