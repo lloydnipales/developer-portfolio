@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Developer Lloyd | Personal Portfolio</title>
+  <title>Developer Lloyd | Home</title>
   <meta name="title" content="Developer Lloyd - Home">
   <meta name="description" content="Explore the personal portfolio of Lloyd Nipales, showcasing projects, skills, and contact information.">
   <meta name="url" content="https://developer-portfolio-nu-three.vercel.app//">
@@ -27,6 +27,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+<!-- Techy Animated Loader -->
+<div id="loader">
+  <div class="loader-bg-grid"></div>
+  <img src="./assets/images/logo.png" alt="Developer Lloyd Logo" class="loader-logo-tech" />
+</div>
+
   <main>
     <aside class="sidebar" data-sidebar>
       <div class="sidebar-info">
@@ -115,7 +121,7 @@
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
+            <button class="navbar-link" data-nav-link>Projects</button>
           </li>
 
           <li class="navbar-item">
@@ -367,9 +373,9 @@
         </section>
       </article>
 
-      <article class="portfolio" data-page="portfolio">
+      <article class="portfolio" data-page="projects">
         <header>
-          <h2 class="h2 article-title">Portfolio</h2>
+          <h2 class="h2 article-title">Projects</h2>
         </header>
 
         <section class="projects">
@@ -518,19 +524,47 @@
         </section>
 
         <section class="contact-form">
-          <h3 class="h3 form-title">Contact Form</h3>
-          <form action="#" class="form" data-form>
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-          </form>
-        </section>
+  <h3 class="h3 form-title">Contact Form</h3>
+  <form class="form" data-form onsubmit="handleSubmit(event)">
+    <div class="input-wrapper">
+      <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+      <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+    </div>
+
+    <div class="input-wrapper">
+  <!-- Inquiry Type -->
+  <div class="select-wrapper">
+    <select name="inquiry" class="form-input" required data-form-input>
+      <option value="" disabled selected>Select Inquiry Type</option>
+      <option value="Web Development">Web Development</option>
+      <option value="Graphic Designing">Graphic Designing</option>
+      <option value="System Development">System Development</option>
+      <option value="Discord Development">Discord Development</option>
+    </select>
+    <i class="fas fa-chevron-down"></i>
+  </div>
+
+  <!-- Purpose -->
+  <div class="select-wrapper">
+    <select name="purpose" class="form-input" required data-form-input>
+      <option value="" disabled selected>Purpose of Contact</option>
+      <option value="General Inquiry">General Inquiry</option>
+      <option value="Admission">Admission</option>
+    </select>
+    <i class="fas fa-chevron-down"></i>
+  </div>
+</div>
+
+
+    <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+    <button class="form-btn" type="submit" disabled data-form-btn>
+      <ion-icon name="paper-plane"></ion-icon>
+      <span>Send Message</span>
+    </button>
+  </form>
+</section>
+
       </article>
     </div>
   </main>
@@ -538,5 +572,14 @@
   <script src="./assets/js/script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.body.classList.add("loaded");
+    }, 5000); // Loader stays for 5 seconds
+  });
+</script>
+
+
 </body>
 </html>
