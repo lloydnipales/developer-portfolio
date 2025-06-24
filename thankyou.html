@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Developer Lloyd | Thank You</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/images/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css"> 
+  <style>
+    :root {
+      --bg-color: #1a1a1a;
+      --accent-color: #facc15;
+      --text-color: #f1f1f1;
+      --card-color: #2a2a2a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100dvh;
+      padding: 1rem;
+      overflow: hidden;
+    }
+
+    .container {
+      background: var(--card-color);
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      animation: fadeSlideIn 1s ease;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .emoji {
+      font-size: clamp(3rem, 8vw, 5rem);
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+      animation: pop 0.4s ease-out;
+    }
+
+    h1 {
+      font-size: clamp(1.5rem, 6vw, 2.25rem);
+      margin: 0;
+      color: var(--accent-color);
+    }
+
+    p {
+      color: #e5e5e5;
+      margin-top: 1rem;
+      font-size: clamp(1rem, 4vw, 1.1rem);
+      line-height: 1.5;
+    }
+
+    a {
+      margin-top: 2rem;
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: var(--accent-color);
+      color: var(--bg-color);
+      text-decoration: none;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      transition: background 0.3s ease, transform 0.3s ease;
+      font-size: clamp(1rem, 3.5vw, 1.1rem);
+    }
+
+    a:hover {
+      background: #eab308;
+      transform: translateY(-2px);
+    }
+
+    @keyframes fadeSlideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="emoji">🎉</div>
+    <h1>Thank You!</h1>
+    <p>Your message was successfully sent.<br>Thank you for contacting Developer Lloyd!</p>
+    <a href="index.html">← Back to Home</a>
+  </div>
+</body>
+</html>
