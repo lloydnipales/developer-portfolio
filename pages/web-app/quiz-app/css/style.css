@@ -269,3 +269,35 @@ body {
     font-size: 1.4rem;
   }
 }
+.home-float-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  border: none;
+  background-color: hsl(223, 90%, 55%);
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.home-float-btn:hover {
+  background-color: hsl(223, 80%, 50%);
+  transform: scale(1.1);
+}
+
+.home-float-btn:active {
+  transform: scale(0.95);
+}
+
+.home-float-btn ion-icon {
+  pointer-events: none;
+}
