@@ -27,10 +27,84 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Main Loader -->
   <div id="loader">
     <div class="loader-bg-grid"></div>
     <img src="./assets/images/logo.png" alt="Developer Lloyd Logo" class="loader-logo-tech" />
   </div>
+
+  <!-- Page Loader for Showcase Tab -->
+  <div id="page-loader" style="display: none;">
+    <div class="loader-container">
+      <svg class="pl" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+    		<svg class="pl" viewBox="0 0 160 160" width="160px" height="160px" xmlns="http://www.w3.org/2000/svg">
+		      <defs>
+				    <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
+					    <stop offset="0%" stop-color="#000"></stop>
+				      <stop offset="100%" stop-color="#fff"></stop>
+			      </linearGradient>
+			      <mask id="mask1">
+              <rect x="0" y="0" width="160" height="160" fill="url(#grad)"></rect>
+			      </mask>
+				    <mask id="mask2">
+					    <rect x="28" y="28" width="104" height="104" fill="url(#grad)"></rect>
+				    </mask>
+			    </defs>
+			    <g>
+				    <g class="pl__ring-rotate">
+		  	      <circle class="pl__ring-stroke" cx="80" cy="80" r="72" fill="none" stroke="hsl(223,90%,55%)" stroke-width="16" stroke-dasharray="452.39 452.39" stroke-dashoffset="452" stroke-linecap="round" transform="rotate(-45,80,80)"></circle>
+			      </g>
+		      </g>
+		      <g mask="url(#mask1)">
+			      <g class="pl__ring-rotate">
+				      <circle class="pl__ring-stroke" cx="80" cy="80" r="72" fill="none" stroke="hsl(193,90%,55%)" stroke-width="16" stroke-dasharray="452.39 452.39" stroke-dashoffset="452" stroke-linecap="round" transform="rotate(-45,80,80)"></circle>
+			      </g>
+			    </g>
+			    <g>
+				    <g stroke-width="4" stroke-dasharray="12 12" stroke-dashoffset="12" stroke-linecap="round" transform="translate(80,80)">
+              <polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14" transform="rotate(-135,0,0) translate(0,40)"></polyline>
+					    <polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14" transform="rotate(-90,0,0) translate(0,40)"></polyline>
+				      <polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14" transform="rotate(-45,0,0) translate(0,40)"></polyline>
+				      <polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14" transform="rotate(0,0,0) translate(0,40)"></polyline>
+				      <polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14" transform="rotate(45,0,0) translate(0,40)"></polyline>
+				      <polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14" transform="rotate(90,0,0) translate(0,40)"></polyline>
+				      <polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14" transform="rotate(135,0,0) translate(0,40)"></polyline>
+					    <polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14" transform="rotate(180,0,0) translate(0,40)"></polyline>
+				    </g>
+		      </g>
+		      <g mask="url(#mask1)">
+			      <g stroke-width="4" stroke-dasharray="12 12" stroke-dashoffset="12" stroke-linecap="round" transform="translate(80,80)">
+				      <polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14" transform="rotate(-135,0,0) translate(0,40)"></polyline>
+				      <polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14" transform="rotate(-90,0,0) translate(0,40)"></polyline>
+					    <polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14" transform="rotate(-45,0,0) translate(0,40)"></polyline>
+					    <polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14" transform="rotate(0,0,0) translate(0,40)"></polyline>
+					    <polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14" transform="rotate(45,0,0) translate(0,40)"></polyline>
+				      <polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14" transform="rotate(90,0,0) translate(0,40)"></polyline>
+				      <polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14" transform="rotate(135,0,0) translate(0,40)"></polyline>
+				      <polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14" transform="rotate(180,0,0) translate(0,40)"></polyline>
+				    </g>
+		      </g>
+          <g>
+				    <g transform="translate(64,28)">
+				      <g class="pl__arrows" transform="rotate(45,16,52)">
+					      <path fill="hsl(3,90%,55%)" d="M17.998,1.506l13.892,43.594c.455,1.426-.56,2.899-1.998,2.899H2.108c-1.437,0-2.452-1.473-1.998-2.899L14.002,1.506c.64-2.008,3.356-2.008,3.996,0Z"></path>
+					      <path fill="hsl(223,10%,90%)" d="M14.009,102.499L.109,58.889c-.453-1.421,.559-2.889,1.991-2.889H29.899c1.433,0,2.444,1.468,1.991,2.889l-13.899,43.61c-.638,2.001-3.345,2.001-3.983,0Z"></path>
+				      </g>
+				    </g>
+			    </g>
+		      <g mask="url(#mask2)">
+			      <g transform="translate(64,28)">
+				      <g class="pl__arrows" transform="rotate(45,16,52)">
+					      <path fill="hsl(333,90%,55%)" d="M17.998,1.506l13.892,43.594c.455,1.426-.56,2.899-1.998,2.899H2.108c-1.437,0-2.452-1.473-1.998-2.899L14.002,1.506c.64-2.008,3.356-2.008,3.996,0Z"></path>
+					      <path fill="hsl(223,90%,80%)" d="M14.009,102.499L.109,58.889c-.453-1.421,.559-2.889,1.991-2.889H29.899c1.433,0,2.444,1.468,1.991,2.889l-13.899,43.61c-.638,2.001-3.345,2.001-3.983,0Z"></path>
+					    </g>
+				    </g>
+		      </g>
+	      </svg>
+      </svg>
+    </div>
+  </div>
+
   <main>
     <aside class="sidebar" data-sidebar>
       <div class="sidebar-info">
@@ -603,62 +677,47 @@
         </section>
 
         <section class="contact-form">
-  <h3 class="h3 form-title">Contact Form</h3>
-  <form class="form" data-form onsubmit="handleSubmit(event)">
-    <div class="input-wrapper">
-      <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-      <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-    </div>
+          <h3 class="h3 form-title">Contact Form</h3>
+          <form class="form" data-form onsubmit="handleSubmit(event)">
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+            
+            <div class="input-wrapper">
+              <div class="select-wrapper">
+                <select name="inquiry" class="form-input" required data-form-input>
+                  <option value="" disabled selected>Select Inquiry Type</option>
+                  <option value="Web Development">Web Development</option>
+                  <option value="Graphic Designing">Graphic Designing</option>
+                  <option value="System Development">System Development</option>
+                  <option value="Discord Development">Discord Development</option>
+                </select>
+                <i class="fas fa-chevron-down"></i>
+              </div>
 
-    <div class="input-wrapper">
-  <!-- Inquiry Type -->
-  <div class="select-wrapper">
-    <select name="inquiry" class="form-input" required data-form-input>
-      <option value="" disabled selected>Select Inquiry Type</option>
-      <option value="Web Development">Web Development</option>
-      <option value="Graphic Designing">Graphic Designing</option>
-      <option value="System Development">System Development</option>
-      <option value="Discord Development">Discord Development</option>
-    </select>
-    <i class="fas fa-chevron-down"></i>
-  </div>
-
-  <!-- Purpose -->
-  <div class="select-wrapper">
-    <select name="purpose" class="form-input" required data-form-input>
-      <option value="" disabled selected>Purpose of Contact</option>
-      <option value="General Inquiry">General Inquiry</option>
-      <option value="Admission">Admission</option>
-    </select>
-    <i class="fas fa-chevron-down"></i>
-  </div>
-</div>
-
-
-    <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-    <button class="form-btn" type="submit" disabled data-form-btn>
-      <ion-icon name="paper-plane"></ion-icon>
-      <span>Send Message</span>
-    </button>
-  </form>
-</section>
-
+              <div class="select-wrapper">
+                <select name="purpose" class="form-input" required data-form-input>
+                  <option value="" disabled selected>Purpose of Contact</option>
+                  <option value="General Inquiry">General Inquiry</option>
+                  <option value="Admission">Admission</option>
+                </select>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+            
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </section>
       </article>
     </div>
   </main>
-
   <script src="./assets/js/script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script>
-  window.addEventListener("load", () => {
-    setTimeout(() => {
-      document.body.classList.add("loaded");
-    }, 5000); // Loader stays for 5 seconds
-  });
-</script>
-
-
 </body>
 </html>
