@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ToDo App | Developer Lloyd</title>
+    <link rel="icon" href="/assets/images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <h3 style="text-align: center;">To-do List Application</h3><br>
+        <div class="task-input">
+            <img src="bars-icon.svg">
+            <input type="text" placeholder="Add a New Task">
+        </div>
+
+        <div class="controls">
+            <div class="filters">
+                <span id="all" class="active">
+                    All
+                </span>
+                <span id="pending">Pending</span>
+                <span id="completed">Completed</span>
+            </div>
+            <button class="clear-btn">Clear All</button>
+        </div>
+        <ul class="task-box"></ul>
+    </div>
+
+    <!-- Home BTN -->
+    <button class="home-float-btn" onclick="window.location.href='/'">
+      <ion-icon name="home-outline"></ion-icon>
+    </button>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Alert Notification | Developer Lloyd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="/assets/images/logo.png" type="image/x-icon">
+</head>
+<body>
+
+  <div class="card">
+    <h2>Interactive Alerts</h2>
+    <div class="buttons">
+      <button class="success-btn" onclick="showNotification('success', 'Everything went perfectly!')">
+         Success
+      </button>
+      <button class="info-btn" onclick="showNotification('info', 'Some information for you.')">
+         Info
+      </button>
+      <button class="warning-btn" onclick="showNotification('warning', 'Proceed with caution.')">
+     Warning
+      </button>
+      <button class="error-btn" onclick="showNotification('error', 'An issue occurred.')">
+         Error
+      </button>
+      <button class="default-btn" onclick="showNotification('default', 'Just a notification.')">
+         Default
+      </button>
+    </div>
+  </div>
+
+  <div class="notification-container" id="notification-container"></div>
+
+  <!-- Home BTN -->
+  <button class="home-float-btn" onclick="window.location.href='/'">
+    <ion-icon name="home-outline"></ion-icon>
+  </button>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #000000, #000e2e);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff;
+}
+
+/* Main card */
+.card.landscape {
+  display: flex;
+  flex-direction: row;
+  width: 900px;
+  max-width: 95%;
+  border-radius: 15px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  transition: all 0.4s ease;
+}
+
+/* Left form section */
+.form-section {
+  flex: 1;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+/* Right visual/text section */
+.image-section {
+  flex: 1;
+  background: linear-gradient(to bottom right, #facc15, #3b82f6);
+  color: #000;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.image-section h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.image-section p {
+  font-size: 16px;
+}
+
+/* Logo */
+.logo {
+  width: 60px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  align-self: center;
+}
+
+/* Toggle links */
+.form-toggle {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.toggle-link {
+  text-decoration: none;
+  color: #facc15;
+  font-weight: bold;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.toggle-link:hover,
+.toggle-link.active {
+  color: #3b82f6;
+}
+
+/* Slide form transitions */
+.form {
+  display: none;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.4s ease;
+}
+
+.active-form {
+  display: flex;
+}
+
+.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-out {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+/* Input styling */
+.form-control {
+  position: relative;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #facc15;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 16px;
+  color: #fff;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: none;
+  border-bottom-color: #3b82f6;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 16px;
+  min-width: 5px;
+  color: #fff;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+              color 0.3s ease;
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: #3b82f6;
+  transform: translateY(-25px);
+}
+
+/* Submit button */
+.submit-btn {
+  background: #facc15;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #ffd633;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .card.landscape {
+    flex-direction: column;
+    width: 90%;
+    border-radius: 0;
+    margin: 0 10px;
+  }
+
+  .form-section,
+  .image-section {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .image-section h2 {
+    font-size: 24px;
+  }
+
+  .form-toggle {
+    margin-top: 10px;
+  }
+
+  .form-control {
+    margin-bottom: 20px;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+
+  .logo {
+    margin: 0 auto 15px;
+  }
+}
+.home-float-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  border: none;
+  background-color: #202020;
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.home-float-btn:hover {
+  background-color: black;
+  transform: scale(1.1);
+}
+
+.home-float-btn:active {
+  transform: scale(0.95);
+}
+
+.home-float-btn ion-icon {
+  pointer-events: none;
+}

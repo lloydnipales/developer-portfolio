@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register/Login Form v1 | Developer Lloyd</title>
+  <link rel="icon" href="/assets/images/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="card">
+    <div class="card-image">
+      <img src="/assets/images/logo.png" alt="Logo" class="logo-img" />
+    </div>
+
+    <div class="form-container">
+      <!-- Register Form -->
+      <form id="registerForm" class="form active" action="/register" method="POST">
+        <h2 class="form-title">Registration Form</h2>
+
+        <div class="input-group">
+          <input required type="text" name="firstName" class="input" autocomplete="off" />
+          <label class="user-label">First Name</label>
+        </div>
+
+        <div class="input-group">
+          <input required type="text" name="lastName" class="input" autocomplete="off" />
+          <label class="user-label">Last Name</label>
+        </div>
+
+        <div class="input-group">
+          <input required type="email" name="email" class="input" autocomplete="off" />
+          <label class="user-label">Email</label>
+        </div>
+
+        <div class="input-group">
+          <input required type="password" name="password" class="input" />
+          <label class="user-label">Password</label>
+        </div>
+
+        <button type="submit" class="submit-btn">Register</button>
+
+        <p class="switch-link">Already have an account? <a onclick="switchForm('login')">Log in here</a></p>
+      </form>
+
+      <!-- Login Form -->
+      <form id="loginForm" class="form" action="/login" method="POST">
+        <h2 class="form-title">Login</h2>
+
+        <div class="input-group">
+          <input required type="email" name="email" class="input" autocomplete="off" />
+          <label class="user-label">Email</label>
+        </div>
+
+        <div class="input-group">
+          <input required type="password" name="password" class="input" />
+          <label class="user-label">Password</label>
+        </div>
+
+        <button type="submit" class="submit-btn">Log In</button>
+
+        <p class="switch-link">Don't have an account? <a onclick="switchForm('register')">Register here</a></p>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Home BTN -->
+  <button class="home-float-btn" onclick="window.location.href='/'">
+    <ion-icon name="home-outline"></ion-icon>
+  </button>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  
+  <script src="js/script.js"></script>
+</body>
+</html>

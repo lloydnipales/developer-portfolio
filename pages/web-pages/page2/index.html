@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register/Login Form v2 | Developer Lloyd</title>
+  <link rel="icon" href="/assets/images/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="card landscape" id="card" data-mode="login">
+    <div class="form-section">
+      <img src="/assets/images/logo.png" alt="Logo" class="logo" />
+
+      <div class="form-toggle">
+        <a href="#" class="toggle-link active" onclick="showForm('login')">Login</a> |
+        <a href="#" class="toggle-link" onclick="showForm('register')">Register</a>
+      </div>
+
+      <!-- Login Form -->
+      <form class="form login-form active-form slide-in" id="login" method="POST">
+        <div class="form-control">
+          <input type="text" name="username" required />
+          <label>
+            <span style="transition-delay:0ms">U</span><span style="transition-delay:50ms">s</span><span style="transition-delay:100ms">e</span><span style="transition-delay:150ms">r</span><span style="transition-delay:200ms">n</span><span style="transition-delay:250ms">a</span><span style="transition-delay:300ms">m</span><span style="transition-delay:350ms">e</span>
+          </label>
+        </div>
+        <div class="form-control">
+          <input type="password" name="password" required />
+          <label>
+            <span style="transition-delay:0ms">P</span><span style="transition-delay:50ms">a</span><span style="transition-delay:100ms">s</span><span style="transition-delay:150ms">s</span><span style="transition-delay:200ms">w</span><span style="transition-delay:250ms">o</span><span style="transition-delay:300ms">r</span><span style="transition-delay:350ms">d</span>
+          </label>
+        </div>
+        <button type="submit" class="submit-btn">Login</button>
+      </form>
+
+      <!-- Register Form -->
+      <form class="form register-form" id="register" method="POST">
+        <div class="form-control">
+          <input type="text" name="fullname" required />
+          <label>
+            <span style="transition-delay:0ms">F</span><span style="transition-delay:50ms">u</span><span style="transition-delay:100ms">l</span><span style="transition-delay:150ms">l</span><span style="transition-delay:200ms">n</span><span style="transition-delay:250ms">a</span><span style="transition-delay:300ms">m</span><span style="transition-delay:350ms">e</span>
+          </label>
+        </div>
+        <div class="form-control">
+          <input type="email" name="email" required />
+          <label>
+            <span style="transition-delay:0ms">E</span><span style="transition-delay:50ms">m</span><span style="transition-delay:100ms">a</span><span style="transition-delay:150ms">i</span><span style="transition-delay:200ms">l</span>
+          </label>
+        </div>
+        <div class="form-control">
+          <input type="password" name="password" required />
+          <label>
+            <span style="transition-delay:0ms">P</span><span style="transition-delay:50ms">a</span><span style="transition-delay:100ms">s</span><span style="transition-delay:150ms">s</span><span style="transition-delay:200ms">w</span><span style="transition-delay:250ms">o</span><span style="transition-delay:300ms">r</span><span style="transition-delay:350ms">d</span>
+          </label>
+        </div>
+        <button type="submit" class="submit-btn">Register</button>
+      </form>
+    </div>
+
+    <div class="image-section">
+      <h2 id="form-title">Welcome Back</h2>
+      <p>Secure login & registration with a touch of elegance.</p>
+    </div>
+  </div>
+  
+  <!-- Home BTN -->
+  <button class="home-float-btn" onclick="window.location.href='/'">
+    <ion-icon name="home-outline"></ion-icon>
+  </button>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  
+  <script src="js/script.js"></script>
+</body>
+</html>
